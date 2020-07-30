@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About page</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="
+    sha384-1zN37f5qgty3VHgiss143ExzMWZxybE1SJSEsQp9s+oqd12jhcu+A56Ebc1zfsj" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="mark.css">
+</head>
+<body>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">MUBBY-TECH</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link ml-5" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" ml-5 href="About.html">About</a>
+        </li>
+        <!--the down part is for drop down-->
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Contact
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="Department.html">Social media handle</a>
+              <a class="dropdown-item" href="#">Office Address</a>
+              <a class="dropdown-item" href="#">E-mail Address</a>
+            </div>
+          </li>  
+      </ul>
+    </div> 
+    
+    <!--modal starts here-->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        Sign in
+      </button>
+    
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="talk">
+           <h1>Please sign in</h1>
+           <p>signin to manage your account.</p>
+          </div>
+            
+            <!-- Modal body -->
+      
+            <form action="/action_page.php">
+              <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" placeholder="Enter email" id="email">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+              </div>
+              <div class="form-group form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox"> Remember me
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <p class="zeebra">Do you have an account?Signin with</p>
+            </form>
+        
+            
+            
+            <!-- Modal footer -->
+            <div class="row">
+              <div class="col-sm-6">
+                <button type="button" class="btn btn-primary btn-md"><i class="fab fa-facebook"></i>sign up with facebook</button>
+              </div>
+              <div class="col-sm-6">
+                <button type="button" class="btn btn-primary btn-md"><i class="fab fa-twitter"></i>sign up with Twitter</button>
+
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!--modal ends here-->
+  </nav>
+
+    <div class="song">
+        <h1 >A beautiful template that<br>does more</h1>
+        <p>Mubby-Tech gives you everything you need to manage<br>
+            bussiness,build great stuff and reach your goal</p>
+    </div>
+    
+    <div>
+        <h1 id="show"></h1>
+    </div>
+
+    <script>
+        var level = 200;
+        if (level == 100){
+            document.getElementById("show").innerHTML = "You're in 100 level";
+        } else if(level == 200){
+            document.getElementById("show").innerHTML = "You're in 200 level";
+        }else{
+            document.getElementById("show").innerHTML = "You're a rogue student";
+        }
+    </script>
+
+    
+    
+
+   
+    
+</body>
+</html>
